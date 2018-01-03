@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../../CoderGirl_iOS/APPartments/APPartments/APPartments/Supporting Fies/Assets.xcassets/Green Button.jpg">
-   </FileRef>
-   <FileRef
-      location = "group:../../CoderGirl_iOS/APPartments/APPartments/APPartments/Supporting Fies/Assets.xcassets/Red Button.jpg">
-   </FileRef>
-   <FileRef
       location = "self:APPartments.xcodeproj">
    </FileRef>
 </Workspace>

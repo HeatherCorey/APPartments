@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EFAB5B831FFD62BB00683EE0 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB5B821FFD62BB00683EE0 /* LocationManager.swift */; };
 		EFC84DE41FFC0859001688E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC84DE31FFC0859001688E3 /* AppDelegate.swift */; };
 		EFC84DE61FFC0859001688E3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC84DE51FFC0859001688E3 /* HomeViewController.swift */; };
 		EFC84DE91FFC0859001688E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC84DE71FFC0859001688E3 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EFAB5B821FFD62BB00683EE0 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		EFC84DE01FFC0859001688E3 /* APPartments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APPartments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFC84DE31FFC0859001688E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFC84DE51FFC0859001688E3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,8 @@
 		EFC84DE21FFC0859001688E3 /* APPartments */ = {
 			isa = PBXGroup;
 			children = (
+				EFC84DF21FFC0859001688E3 /* Info.plist */,
+				EFAB5B821FFD62BB00683EE0 /* LocationManager.swift */,
 				EFC84DE31FFC0859001688E3 /* AppDelegate.swift */,
 				EFC84DFE1FFC0DFD001688E3 /* Storyboard and Assets */,
 				EFC84DFF1FFC0E3B001688E3 /* Supporting Files */,
@@ -109,7 +113,6 @@
 		EFC84DFF1FFC0E3B001688E3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				EFC84DF21FFC0859001688E3 /* Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -147,6 +150,11 @@
 					EFC84DDF1FFC0859001688E3 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -191,6 +199,7 @@
 				EFC84DFD1FFC0DCB001688E3 /* CoreDataStack.swift in Sources */,
 				EFC84E011FFC0F02001688E3 /* NewRouteViewController.swift in Sources */,
 				EFC84DE61FFC0859001688E3 /* HomeViewController.swift in Sources */,
+				EFAB5B831FFD62BB00683EE0 /* LocationManager.swift in Sources */,
 				EFC84DEC1FFC0859001688E3 /* APPartments.xcdatamodeld in Sources */,
 				EFC84DF91FFC09DD001688E3 /* RouteDetailsViewController.swift in Sources */,
 				EFC84DE41FFC0859001688E3 /* AppDelegate.swift in Sources */,
