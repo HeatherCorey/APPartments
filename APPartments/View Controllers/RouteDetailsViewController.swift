@@ -28,7 +28,7 @@ class RouteDetailsViewController: UIViewController {
     }
     
     private func configureView() {
-        loadMap()
+//        loadMap()
     }
     
     private func mapRegion() -> MKCoordinateRegion? {
@@ -61,23 +61,23 @@ class RouteDetailsViewController: UIViewController {
         return MKCoordinateRegion(center: center, span: span)
     }
     
-    private func loadMap() {
-        guard
-            let locations = route.locations,
-            locations.count > 0,
-            let region = mapRegion()
-            else {
-                let alert = UIAlertController(title: "Error",
-                                              message: "Sorry, this route has no locations saved",
-                                              preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .cancel))
-                present(alert, animated: true)
-                return
-        }
-        
-        mapView.setRegion(region, animated: true)
-        mapView.add(polyLine())
-    }
+//    private func loadMap() {
+//        guard
+//            let locations = route.locations,
+//            locations.count > 0,
+//            let region = mapRegion()
+//            else {
+//                let alert = UIAlertController(title: "Error",
+//                                              message: "Sorry, this route has no locations saved",
+//                                              preferredStyle: .alert)
+//                alert.addAction(UIAlertAction(title: "OK", style: .cancel))
+//                present(alert, animated: true)
+//                return
+//      }
+//
+//        mapView.setRegion(region, animated: true)
+//        mapView.add(polyLine())
+//    }
     
     private func polyLine() -> MKPolyline {
         guard let locations = route.locations else {

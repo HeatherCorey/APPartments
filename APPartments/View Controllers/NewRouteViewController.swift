@@ -18,6 +18,7 @@ class NewRouteViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var routingLabel: UILabel!
     
 //    Properties
     
@@ -25,7 +26,7 @@ class NewRouteViewController: UIViewController {
     private let locationManager = LocationManager.shared
     private var seconds = 0
     private var timer: Timer?
-    private var distance = Measurement(value: 0, unit: UnitLength.miles)
+    private var distance = Measurement(value: 0, unit: UnitLength.meters)
     private var locationList: [CLLocation] = []
     
 //    Functions
@@ -45,7 +46,22 @@ class NewRouteViewController: UIViewController {
 //        updateDisplay()
     }
     
+//    private func updateDisplay() {
+//        let formattedDistance = FormatDisplay.distance(distance)
+//        let formattedTime = FormatDisplay.time(seconds)
+//        let formattedPace = FormatDisplay.pace(distance: distance,
+//                                               seconds: seconds,
+//                                               outputUnit: UnitSpeed.minutesPerMile)
+//
+//        distanceLabel.text = "Distance:  \(formattedDistance)"
+//        timeLabel.text = "Time:  \(formattedTime)"
+//        paceLabel.text = "Pace:  \(formattedPace)"
+//    }
+    
     private func startRoute() {
+        startButton.isHidden = true
+        stopButton.isHidden = false
+        routingLabel.text = "Routing Now"
         seconds = 0
         distance = Measurement(value: 0, unit: UnitLength.meters)
         locationList.removeAll()
@@ -57,6 +73,8 @@ class NewRouteViewController: UIViewController {
     }
     
     private func stopRoute() {
+        startButton.isHidden = true
+        stopButton.isHidden = false
 //        mapContainerView.isHidden = true
         locationManager.stopUpdatingLocation()
     }
@@ -96,22 +114,22 @@ class NewRouteViewController: UIViewController {
     
     @IBAction func stopTapped(_ sender: UIButton) {
         
-        let alertController = UIAlertController(title: "End route?",
-                                                message: "Do you wish to end your route?",
+        let alertController = UIAlertController(title: "End run?",
+                                                message: "Do you wish to end your run?",
                                                 preferredStyle: .actionSheet)
         alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         alertController.addAction(UIAlertAction(title: "Save", style: .default) { _ in
             self.stopRoute()
+            self.saveRoute()
+            self.performSegue(withIdentifier: "detailsSegue", sender: nil)
         })
         alertController.addAction(UIAlertAction(title: "Discard", style: .destructive) { _ in
             self.stopRoute()
-            self.saveRoute()
             _ = self.navigationController?.popToRootViewController(animated: true)
         })
         
         present(alertController, animated: true)
     }
-    
    
 }
 
@@ -125,9 +143,26 @@ extension NewRouteViewController: CLLocationManagerDelegate {
             if let lastLocation = locationList.last {
                 let delta = newLocation.distance(from: lastLocation)
                 distance = distance + Measurement(value: delta, unit: UnitLength.meters)
+                let coordinates = [lastLocation.coordinate, newLocation.coordinate]
+                mapView.add(MKPolyline(coordinates: coordinates, count: 2))
+                let region = MKCoordinateRegionMakeWithDistance(newLocation.coordinate, 500, 500)
+                mapView.setRegion(region, animated: true)
             }
             
             locationList.append(newLocation)
+            print(locationList)
         }
+    }
+}
+
+extension NewRouteViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        guard let polyline = overlay as? MKPolyline else {
+            return MKOverlayRenderer(overlay: overlay)
+        }
+        let renderer = MKPolylineRenderer(polyline: polyline)
+        renderer.strokeColor = .blue
+        renderer.lineWidth = 3
+        return renderer
     }
 }
