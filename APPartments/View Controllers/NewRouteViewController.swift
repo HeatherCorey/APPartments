@@ -121,7 +121,7 @@ class NewRouteViewController: UIViewController {
         alertController.addAction(UIAlertAction(title: "Save", style: .default) { _ in
             self.stopRoute()
             self.saveRoute()
-            self.performSegue(withIdentifier: "detailsSegue", sender: nil)
+            self.performSegue(withIdentifier: "fetchRequestSegue", sender: nil)
         })
         alertController.addAction(UIAlertAction(title: "Discard", style: .destructive) { _ in
             self.stopRoute()

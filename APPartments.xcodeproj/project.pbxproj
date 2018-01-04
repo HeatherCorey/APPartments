@@ -10,6 +10,8 @@
 		EFAB5B831FFD62BB00683EE0 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB5B821FFD62BB00683EE0 /* LocationManager.swift */; };
 		EFAB5B871FFD75DF00683EE0 /* UnitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB5B861FFD75DF00683EE0 /* UnitExtensions.swift */; };
 		EFAB5B891FFD764300683EE0 /* FormatDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB5B881FFD764300683EE0 /* FormatDisplay.swift */; };
+		EFAB5B8B1FFEBC1D00683EE0 /* FetchRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB5B8A1FFEBC1D00683EE0 /* FetchRequestViewController.swift */; };
+		EFAB5B8F1FFEC50900683EE0 /* FetchedDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB5B8E1FFEC50900683EE0 /* FetchedDataTableViewCell.swift */; };
 		EFC84DE41FFC0859001688E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC84DE31FFC0859001688E3 /* AppDelegate.swift */; };
 		EFC84DE61FFC0859001688E3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC84DE51FFC0859001688E3 /* HomeViewController.swift */; };
 		EFC84DE91FFC0859001688E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC84DE71FFC0859001688E3 /* Main.storyboard */; };
@@ -27,6 +29,8 @@
 		EFAB5B821FFD62BB00683EE0 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		EFAB5B861FFD75DF00683EE0 /* UnitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitExtensions.swift; sourceTree = "<group>"; };
 		EFAB5B881FFD764300683EE0 /* FormatDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatDisplay.swift; sourceTree = "<group>"; };
+		EFAB5B8A1FFEBC1D00683EE0 /* FetchRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRequestViewController.swift; sourceTree = "<group>"; };
+		EFAB5B8E1FFEC50900683EE0 /* FetchedDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchedDataTableViewCell.swift; sourceTree = "<group>"; };
 		EFC84DE01FFC0859001688E3 /* APPartments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APPartments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFC84DE31FFC0859001688E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFC84DE51FFC0859001688E3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +78,7 @@
 		EFC84DE21FFC0859001688E3 /* APPartments */ = {
 			isa = PBXGroup;
 			children = (
+				EFAB5B8E1FFEC50900683EE0 /* FetchedDataTableViewCell.swift */,
 				EFAB5B861FFD75DF00683EE0 /* UnitExtensions.swift */,
 				EFAB5B881FFD764300683EE0 /* FormatDisplay.swift */,
 				EFC84DF21FFC0859001688E3 /* Info.plist */,
@@ -90,6 +95,7 @@
 		EFC84DFA1FFC0CA9001688E3 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EFAB5B8A1FFEBC1D00683EE0 /* FetchRequestViewController.swift */,
 				EFC84DE51FFC0859001688E3 /* HomeViewController.swift */,
 				EFC84E001FFC0F02001688E3 /* NewRouteViewController.swift */,
 				EFC84DF81FFC09DD001688E3 /* RouteDetailsViewController.swift */,
@@ -205,11 +211,13 @@
 				EFC84DFD1FFC0DCB001688E3 /* CoreDataStack.swift in Sources */,
 				EFC84E011FFC0F02001688E3 /* NewRouteViewController.swift in Sources */,
 				EFC84DE61FFC0859001688E3 /* HomeViewController.swift in Sources */,
+				EFAB5B8F1FFEC50900683EE0 /* FetchedDataTableViewCell.swift in Sources */,
 				EFAB5B831FFD62BB00683EE0 /* LocationManager.swift in Sources */,
 				EFC84DEC1FFC0859001688E3 /* APPartments.xcdatamodeld in Sources */,
 				EFC84DF91FFC09DD001688E3 /* RouteDetailsViewController.swift in Sources */,
 				EFAB5B891FFD764300683EE0 /* FormatDisplay.swift in Sources */,
 				EFC84DE41FFC0859001688E3 /* AppDelegate.swift in Sources */,
+				EFAB5B8B1FFEBC1D00683EE0 /* FetchRequestViewController.swift in Sources */,
 				EFAB5B871FFD75DF00683EE0 /* UnitExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

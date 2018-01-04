@@ -127,11 +127,27 @@
                         <outlet property="startButton" destination="Olo-gu-0da" id="7iL-Bv-7mp"/>
                         <outlet property="stopButton" destination="Wb6-C0-gKR" id="IFR-A0-9nK"/>
                         <segue destination="O3y-SQ-HDa" kind="show" identifier="detailsSegue" id="Gyi-pa-DeX"/>
+                        <segue destination="jL3-hA-WU6" kind="show" identifier="fetchRequestSegue" id="HiS-V7-iGV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wz6-hh-kEo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1334" y="139"/>
+        </scene>
+        <!--Fetch Request View Controller-->
+        <scene sceneID="DCV-ms-Wdf">
+            <objects>
+                <viewController id="jL3-hA-WU6" customClass="FetchRequestViewController" customModule="APPartments" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jMZ-DW-Fez">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="HuB-sh-3CR"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yO0-xj-WfY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2328.8000000000002" y="-578.86056971514245"/>
         </scene>
         <!--Route Details View Controller-->
         <scene sceneID="Hcs-ww-0ni">
@@ -158,12 +174,12 @@
                         <viewLayoutGuide key="safeArea" id="UsF-Rd-Uj4"/>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="wGH-gS-y0p" id="WHZ-RZ-z7p"/>
+                        <outlet property="mapView" destination="wGH-gS-y0p" id="wiz-Mc-iKW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i9z-jR-s5J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2270" y="139"/>
+            <point key="canvasLocation" x="2330" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JvI-CY-VR8">
