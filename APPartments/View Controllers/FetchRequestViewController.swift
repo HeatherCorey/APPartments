@@ -10,16 +10,29 @@ import Foundation
 import UIKit
 import CoreData
 
-class FetchRequestViewController: UIViewController {
+class FetchRequestViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
 //    IBOutlets
     
+    @IBOutlet weak var fetchedDataTableView: UITableView!
     
 //    Properties
     
     var locations: [Location] = []
     
 //    Functions
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return locations.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "fetchedDataCell", for: indexPath) as! FetchedDataTableViewCell
+        
+        cell.locationLatitude = String(locations[indexPath.row].latitude)
+        
+        return cell
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         

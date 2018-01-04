@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 class FetchedDataTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var fetchedDataLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,14 +25,14 @@ class FetchedDataTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    var band: String = "" {
+    var locationLatitude: String = "" {
         didSet {
             updateUI()
         }
     }
     
     func updateUI() {
-//        bandsCell.text = band
+        fetchedDataLabel.text = locationLatitude
     }
 
 }
