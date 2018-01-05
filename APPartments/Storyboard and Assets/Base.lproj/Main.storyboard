@@ -98,8 +98,8 @@
                                     <action selector="stopTapped:" destination="AOm-Hh-ycp" eventType="touchUpInside" id="b6H-og-azS"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEU-PG-a44">
-                                <rect key="frame" x="166" y="91" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEU-PG-a44">
+                                <rect key="frame" x="67" y="91" width="240" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -132,7 +132,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wz6-hh-kEo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1334" y="139"/>
+            <point key="canvasLocation" x="1333.5999999999999" y="138.98050974512745"/>
         </scene>
         <!--Fetch Request View Controller-->
         <scene sceneID="DCV-ms-Wdf">
@@ -153,21 +153,25 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPa-h8-1f9">
-                                                    <rect key="frame" x="0.0" y="22" width="375" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Longitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJs-Qe-P1E" userLabel="Longitude Label">
+                                                    <rect key="frame" x="204" y="12" width="156" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Latitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPa-h8-1f9" userLabel="Latitude Label">
+                                                    <rect key="frame" x="15" y="11" width="153" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="uPa-h8-1f9" secondAttribute="trailing" id="dEq-mC-QDe"/>
-                                                <constraint firstItem="uPa-h8-1f9" firstAttribute="leading" secondItem="G6n-Vl-LQN" secondAttribute="leading" id="rTH-gH-a3l"/>
-                                                <constraint firstAttribute="bottom" secondItem="uPa-h8-1f9" secondAttribute="bottom" id="uee-BY-8VY"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="fetchedDataLabel" destination="uPa-h8-1f9" id="SG8-xb-K4x"/>
+                                            <outlet property="latitudeLabel" destination="uPa-h8-1f9" id="SG8-xb-K4x"/>
+                                            <outlet property="longitudeLabel" destination="eJs-Qe-P1E" id="y2y-lK-I22"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

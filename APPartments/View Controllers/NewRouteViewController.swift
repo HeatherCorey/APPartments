@@ -115,7 +115,7 @@ class NewRouteViewController: UIViewController {
     @IBAction func stopTapped(_ sender: UIButton) {
         
         let alertController = UIAlertController(title: "End run?",
-                                                message: "Do you wish to end your run?",
+                                                message: "Do you wish to end your route?",
                                                 preferredStyle: .actionSheet)
         alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         alertController.addAction(UIAlertAction(title: "Save", style: .default) { _ in

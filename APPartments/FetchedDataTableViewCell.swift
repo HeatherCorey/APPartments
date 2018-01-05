@@ -12,7 +12,8 @@ import CoreData
 class FetchedDataTableViewCell: UITableViewCell {
 
     
-    @IBOutlet weak var fetchedDataLabel: UILabel!
+    @IBOutlet weak var latitudeLabel: UILabel!
+    @IBOutlet weak var longitudeLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,14 +26,22 @@ class FetchedDataTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    var locationLatitude: String = "" {
-        didSet {
-            updateUI()
-        }
-    }
-    
-    func updateUI() {
-        fetchedDataLabel.text = locationLatitude
-    }
-
+//    var locationLatitude: String = "" {
+//        didSet {
+//            updateUI()
+//        }
+//    }
+//    
+//    var locationLongitude: String = "" {
+//        didSet {
+//            updateUI()
+//        }
+//    }
+//    
+//    func updateUI() {
+//        latitudeLabel.text = "Latitude: \(locationLatitude)"
+//        longitudeLabel.text = "Longitude: \(locationLongitude)"
+//    }
+//
 }
+

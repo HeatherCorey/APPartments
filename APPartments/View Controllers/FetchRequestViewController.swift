@@ -28,9 +28,9 @@ class FetchRequestViewController: UIViewController, UITableViewDelegate, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "fetchedDataCell", for: indexPath) as! FetchedDataTableViewCell
-        
-        cell.locationLatitude = String(locations[indexPath.row].latitude)
-        
+
+        cell.latitudeLabel.text = String(locations[indexPath.row].latitude)
+        cell.longitudeLabel.text = String(locations[indexPath.row].longitude)
         return cell
     }
     
