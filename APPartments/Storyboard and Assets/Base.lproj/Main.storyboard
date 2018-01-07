@@ -126,7 +126,6 @@
                         <outlet property="routingLabel" destination="SEU-PG-a44" id="fX0-oK-GNJ"/>
                         <outlet property="startButton" destination="Olo-gu-0da" id="7iL-Bv-7mp"/>
                         <outlet property="stopButton" destination="Wb6-C0-gKR" id="IFR-A0-9nK"/>
-                        <segue destination="O3y-SQ-HDa" kind="show" identifier="detailsSegue" id="Gyi-pa-DeX"/>
                         <segue destination="jL3-hA-WU6" kind="show" identifier="fetchRequestSegue" id="HiS-V7-iGV"/>
                     </connections>
                 </viewController>
@@ -196,39 +195,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yO0-xj-WfY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2328.8000000000002" y="-578.86056971514245"/>
-        </scene>
-        <!--Route Details View Controller-->
-        <scene sceneID="Hcs-ww-0ni">
-            <objects>
-                <viewController id="O3y-SQ-HDa" customClass="RouteDetailsViewController" customModule="APPartments" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="W1f-eQ-Ot5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wGH-gS-y0p">
-                                <rect key="frame" x="67" y="120.5" width="240" height="240"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="3i9-64-ctO"/>
-                                    <constraint firstAttribute="width" secondItem="wGH-gS-y0p" secondAttribute="height" multiplier="1:1" id="URx-H5-A77"/>
-                                    <constraint firstAttribute="height" constant="240" id="VJL-0p-J0d"/>
-                                </constraints>
-                            </mapView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="wGH-gS-y0p" firstAttribute="centerX" secondItem="UsF-Rd-Uj4" secondAttribute="centerX" id="C8r-fK-zOk"/>
-                            <constraint firstItem="wGH-gS-y0p" firstAttribute="centerY" secondItem="UsF-Rd-Uj4" secondAttribute="centerY" constant="-125" id="cfo-yW-jGO"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="UsF-Rd-Uj4"/>
-                    </view>
-                    <connections>
-                        <outlet property="mapView" destination="wGH-gS-y0p" id="wiz-Mc-iKW"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="i9z-jR-s5J" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2330" y="139"/>
+            <point key="canvasLocation" x="2212" y="133"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JvI-CY-VR8">
