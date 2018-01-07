@@ -43,20 +43,8 @@ class NewRouteViewController: UIViewController {
     
     func eachSecond() {
         seconds += 1
-//        updateDisplay()
     }
     
-//    private func updateDisplay() {
-//        let formattedDistance = FormatDisplay.distance(distance)
-//        let formattedTime = FormatDisplay.time(seconds)
-//        let formattedPace = FormatDisplay.pace(distance: distance,
-//                                               seconds: seconds,
-//                                               outputUnit: UnitSpeed.minutesPerMile)
-//
-//        distanceLabel.text = "Distance:  \(formattedDistance)"
-//        timeLabel.text = "Time:  \(formattedTime)"
-//        paceLabel.text = "Pace:  \(formattedPace)"
-//    }
     
     private func startRoute() {
         startButton.isHidden = true
@@ -65,7 +53,6 @@ class NewRouteViewController: UIViewController {
         seconds = 0
         distance = Measurement(value: 0, unit: UnitLength.meters)
         locationList.removeAll()
-//        updateDisplay()
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
             self.eachSecond()
         }
@@ -114,7 +101,7 @@ class NewRouteViewController: UIViewController {
     
     @IBAction func stopTapped(_ sender: UIButton) {
         
-        let alertController = UIAlertController(title: "End run?",
+        let alertController = UIAlertController(title: "End route?",
                                                 message: "Do you wish to end your route?",
                                                 preferredStyle: .actionSheet)
         alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
