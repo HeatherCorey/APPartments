@@ -152,25 +152,22 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Longitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJs-Qe-P1E" userLabel="Longitude Label">
-                                                    <rect key="frame" x="204" y="12" width="156" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Latitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPa-h8-1f9" userLabel="Latitude Label">
-                                                    <rect key="frame" x="15" y="11" width="153" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPa-h8-1f9" userLabel="Timestamp Label">
+                                                    <rect key="frame" x="0.0" y="0.5" width="375" height="43.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="uPa-h8-1f9" firstAttribute="width" secondItem="G6n-Vl-LQN" secondAttribute="width" id="ceW-Cn-0Vc"/>
+                                                <constraint firstItem="uPa-h8-1f9" firstAttribute="centerX" secondItem="G6n-Vl-LQN" secondAttribute="centerX" id="nbm-ue-Gsk"/>
+                                                <constraint firstItem="uPa-h8-1f9" firstAttribute="height" secondItem="G6n-Vl-LQN" secondAttribute="height" id="qSF-Zs-FQX"/>
+                                                <constraint firstItem="uPa-h8-1f9" firstAttribute="centerY" secondItem="G6n-Vl-LQN" secondAttribute="centerY" id="zbL-dg-eHT"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="latitudeLabel" destination="uPa-h8-1f9" id="SG8-xb-K4x"/>
-                                            <outlet property="longitudeLabel" destination="eJs-Qe-P1E" id="y2y-lK-I22"/>
+                                            <outlet property="timeStamp" destination="uPa-h8-1f9" id="SG8-xb-K4x"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

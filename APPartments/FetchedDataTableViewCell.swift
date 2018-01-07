@@ -12,8 +12,8 @@ import CoreData
 class FetchedDataTableViewCell: UITableViewCell {
 
     
-    @IBOutlet weak var latitudeLabel: UILabel!
-    @IBOutlet weak var longitudeLabel: UILabel!
+    @IBOutlet weak var timeStamp: UILabel!
+
     
     override func awakeFromNib() {
         super.awakeFromNib()

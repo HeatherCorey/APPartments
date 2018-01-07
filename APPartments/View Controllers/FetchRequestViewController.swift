@@ -19,18 +19,18 @@ class FetchRequestViewController: UIViewController, UITableViewDelegate, UITable
 //    Properties
     
     var locations: [Location] = []
+    var routes: [Route] = []
     
 //    Functions
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return locations.count
+        return routes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "fetchedDataCell", for: indexPath) as! FetchedDataTableViewCell
 
-        cell.latitudeLabel.text = String(locations[indexPath.row].latitude)
-        cell.longitudeLabel.text = String(locations[indexPath.row].longitude)
+        cell.timeStamp.text = String(describing: routes[indexPath.row].timestamp)
         return cell
     }
     
@@ -41,12 +41,24 @@ class FetchRequestViewController: UIViewController, UITableViewDelegate, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         locations = getLocations()
+        routes = getRoutes()
         printLocations()
     }
     
     private func getLocations() -> [Location] {
         let fetchRequest: NSFetchRequest<Location> = Location.fetchRequest()
         let sortDescriptor = NSSortDescriptor(key: #keyPath(Location.timestamp), ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        do {
+            return try CoreDataStack.context.fetch(fetchRequest)
+        } catch {
+            return []
+        }
+    }
+    
+    private func getRoutes() -> [Route] {
+        let fetchRequest: NSFetchRequest<Route> = Route.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: #keyPath(Route.timestamp), ascending:true)
         fetchRequest.sortDescriptors = [sortDescriptor]
         do {
             return try CoreDataStack.context.fetch(fetchRequest)
