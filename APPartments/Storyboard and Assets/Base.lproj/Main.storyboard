@@ -98,7 +98,7 @@
                                     <action selector="stopTapped:" destination="AOm-Hh-ycp" eventType="touchUpInside" id="b6H-og-azS"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEU-PG-a44">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEU-PG-a44">
                                 <rect key="frame" x="67" y="91" width="240" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -167,7 +167,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="timeStamp" destination="uPa-h8-1f9" id="SG8-xb-K4x"/>
+                                            <outlet property="routeDescription" destination="uPa-h8-1f9" id="SG8-xb-K4x"/>
                                             <segue destination="cr3-0s-L2K" kind="show" id="1iY-aL-qm2"/>
                                         </connections>
                                     </tableViewCell>

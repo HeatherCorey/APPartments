@@ -30,7 +30,7 @@ class FetchRequestViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "fetchedDataCell", for: indexPath) as! FetchedDataTableViewCell
 
-        cell.timeStamp.text = routes[indexPath.row].userDefinedDescription
+        cell.routeDescription.text = routes[indexPath.row].userDefinedDescription
         return cell
     }
     

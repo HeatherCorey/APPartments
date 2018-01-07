@@ -63,7 +63,6 @@ class NewRouteViewController: UIViewController {
     private func stopRoute() {
         startButton.isHidden = true
         stopButton.isHidden = false
-//        mapContainerView.isHidden = true
         locationManager.stopUpdatingLocation()
     }
     
@@ -74,13 +73,41 @@ class NewRouteViewController: UIViewController {
         newRoute.timestamp = Date()
         newRoute.userDefinedDescription = routeDescription?.text
         
+        var minLat: Double = 1000
+        var maxLat: Double = -1000
+        var minLong: Double = 1000
+        var maxLong: Double = -1000
+
+        
         for location in locationList {
+            
             let locationObject = Location(context: CoreDataStack.context)
             locationObject.timestamp = location.timestamp
             locationObject.latitude = location.coordinate.latitude
             locationObject.longitude = location.coordinate.longitude
+            
+
+            
             newRoute.addToLocations(locationObject)
+            
+            if (locationObject.latitude < minLat) {
+                minLat = locationObject.latitude
+            }
+            if (locationObject.latitude > maxLat) {
+                maxLat = locationObject.latitude
+            }
+            if (locationObject.longitude < minLong) {
+                minLong = locationObject.longitude
+            }
+            if (locationObject.latitude > maxLong) {
+                maxLong = locationObject.longitude
+            }
         }
+        
+        newRoute.minLat = minLat
+        newRoute.maxLat = maxLat
+        newRoute.minLong = minLong
+        newRoute.maxLong = maxLong
         
         CoreDataStack.saveContext()
         

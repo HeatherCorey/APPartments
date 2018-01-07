@@ -12,7 +12,7 @@ import CoreData
 class FetchedDataTableViewCell: UITableViewCell {
 
     
-    @IBOutlet weak var timeStamp: UILabel!
+    @IBOutlet weak var routeDescription: UILabel!
 
     
     override func awakeFromNib() {
