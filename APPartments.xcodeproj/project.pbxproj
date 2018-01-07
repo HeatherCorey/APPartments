@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF5146AE2002C93D00A9FF5A /* RouteDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5146AD2002C93D00A9FF5A /* RouteDetailsViewController.swift */; };
 		EFAB5B831FFD62BB00683EE0 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB5B821FFD62BB00683EE0 /* LocationManager.swift */; };
 		EFAB5B871FFD75DF00683EE0 /* UnitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB5B861FFD75DF00683EE0 /* UnitExtensions.swift */; };
 		EFAB5B891FFD764300683EE0 /* FormatDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB5B881FFD764300683EE0 /* FormatDisplay.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF5146AD2002C93D00A9FF5A /* RouteDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RouteDetailsViewController.swift; path = "APPartments/View Controllers/RouteDetailsViewController.swift"; sourceTree = SOURCE_ROOT; };
 		EFAB5B821FFD62BB00683EE0 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		EFAB5B861FFD75DF00683EE0 /* UnitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitExtensions.swift; sourceTree = "<group>"; };
 		EFAB5B881FFD764300683EE0 /* FormatDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatDisplay.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 		EFC84DFA1FFC0CA9001688E3 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EF5146AD2002C93D00A9FF5A /* RouteDetailsViewController.swift */,
 				EFAB5B8A1FFEBC1D00683EE0 /* FetchRequestViewController.swift */,
 				EFC84DE51FFC0859001688E3 /* HomeViewController.swift */,
 				EFC84E001FFC0F02001688E3 /* NewRouteViewController.swift */,
@@ -213,6 +216,7 @@
 				EFC84DEC1FFC0859001688E3 /* APPartments.xcdatamodeld in Sources */,
 				EFAB5B891FFD764300683EE0 /* FormatDisplay.swift in Sources */,
 				EFC84DE41FFC0859001688E3 /* AppDelegate.swift in Sources */,
+				EF5146AE2002C93D00A9FF5A /* RouteDetailsViewController.swift in Sources */,
 				EFAB5B8B1FFEBC1D00683EE0 /* FetchRequestViewController.swift in Sources */,
 				EFAB5B871FFD75DF00683EE0 /* UnitExtensions.swift in Sources */,
 			);

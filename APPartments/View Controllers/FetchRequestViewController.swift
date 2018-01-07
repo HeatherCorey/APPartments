@@ -30,7 +30,7 @@ class FetchRequestViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "fetchedDataCell", for: indexPath) as! FetchedDataTableViewCell
 
-        cell.timeStamp.text = String(describing: routes[indexPath.row].timestamp)
+        cell.timeStamp.text = routes[indexPath.row].userDefinedDescription
         return cell
     }
     
@@ -42,7 +42,6 @@ class FetchRequestViewController: UIViewController, UITableViewDelegate, UITable
         super.viewDidLoad()
         locations = getLocations()
         routes = getRoutes()
-        printLocations()
     }
     
     private func getLocations() -> [Location] {
@@ -66,13 +65,4 @@ class FetchRequestViewController: UIViewController, UITableViewDelegate, UITable
             return []
         }
     }
-    
-    func printLocations() {
-        for location in locations {
-            print("Latitude: \(location.latitude)")
-            print("Longitude: \(location.longitude)")
-            print("Timstamp: \(location.timestamp!)")
-        }
-    }
-    
 }

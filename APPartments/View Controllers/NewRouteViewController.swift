@@ -28,6 +28,7 @@ class NewRouteViewController: UIViewController {
     private var timer: Timer?
     private var distance = Measurement(value: 0, unit: UnitLength.meters)
     private var locationList: [CLLocation] = []
+    private var routeDescription: UITextField?
     
 //    Functions
     
@@ -71,6 +72,7 @@ class NewRouteViewController: UIViewController {
         newRoute.distance = distance.value
         newRoute.duration = Int16(seconds)
         newRoute.timestamp = Date()
+        newRoute.userDefinedDescription = routeDescription?.text
         
         for location in locationList {
             let locationObject = Location(context: CoreDataStack.context)
@@ -102,9 +104,11 @@ class NewRouteViewController: UIViewController {
     @IBAction func stopTapped(_ sender: UIButton) {
         
         let alertController = UIAlertController(title: "End route?",
-                                                message: "Do you wish to end your route?",
-                                                preferredStyle: .actionSheet)
+                                                message: "Please enter a short description of your route:",
+                                                preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        alertController.addTextField()
+        routeDescription = alertController.textFields![0]
         alertController.addAction(UIAlertAction(title: "Save", style: .default) { _ in
             self.stopRoute()
             self.saveRoute()
