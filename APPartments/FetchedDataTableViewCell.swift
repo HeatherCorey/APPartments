@@ -25,23 +25,5 @@ class FetchedDataTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
-//    var locationLatitude: String = "" {
-//        didSet {
-//            updateUI()
-//        }
-//    }
-//    
-//    var locationLongitude: String = "" {
-//        didSet {
-//            updateUI()
-//        }
-//    }
-//    
-//    func updateUI() {
-//        latitudeLabel.text = "Latitude: \(locationLatitude)"
-//        longitudeLabel.text = "Longitude: \(locationLongitude)"
-//    }
-//
 }
 

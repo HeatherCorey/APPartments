@@ -99,7 +99,7 @@ class NewRouteViewController: UIViewController {
             if (locationObject.longitude < minLong) {
                 minLong = locationObject.longitude
             }
-            if (locationObject.latitude > maxLong) {
+            if (locationObject.longitude > maxLong) {
                 maxLong = locationObject.longitude
             }
         }
@@ -108,6 +108,8 @@ class NewRouteViewController: UIViewController {
         newRoute.maxLat = maxLat
         newRoute.minLong = minLong
         newRoute.maxLong = maxLong
+        
+        print("SaveRoute minLat \(minLat), maxLat \(maxLat), minLong \(minLong), maxLong \(maxLong)")
         
         CoreDataStack.saveContext()
         

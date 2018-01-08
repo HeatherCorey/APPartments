@@ -7,27 +7,38 @@
 //
 
 import UIKit
+import CoreData
+
 
 class RouteDetailsViewController: UIViewController {
     
-    
+    var chosenRoute: Route!
     
     @IBOutlet weak var urlTextView: UITextView!
+    @IBOutlet weak var descriptionTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
-
-        // Do any additional setup after loading the view.
-    }
-    
-    func getCoordinates() {
         
+        urlTextView.text = chosenRoute.userDefinedDescription
+        
+        let minLat = chosenRoute.minLat
+        let maxLat = chosenRoute.maxLat
+        let minLong = chosenRoute.minLong
+        let maxLong = chosenRoute.maxLong
+        
+        print("MinLat: \(minLat)")
+        print("MaxLat: \(maxLat)")
+        print("MinLong: \(minLong)")
+        print("MaxLong: \(maxLong)")
+        
+        
+        urlSet(minLat: chosenRoute.minLat, maxLat: chosenRoute.maxLat, minLong: chosenRoute.minLong, maxLong: chosenRoute.maxLong)
     }
     
-    func urlSet() {
-        guard let url = URL(string: "http://www.google.com") else {
+    func urlSet(minLat: Double, maxLat: Double, minLong: Double, maxLong: Double) {
+        guard let url = URL(string: "https://www.zillow.com/homes/for_sale/fsba,fsbo,fore,new_lt/0_fr/1_fs/1_pnd/\(maxLat),\(maxLong),\(minLat),\(minLong)_rect/0_mmm/_rect/0_mmm/") else {
             return
         }
         
@@ -37,10 +48,4 @@ class RouteDetailsViewController: UIViewController {
             UIApplication.shared.openURL(url)
         }
     }
-    
-    @IBAction func sendQueryAction(_ sender: UIButton) {
-        
-        urlSet()
-    }
-    
 }

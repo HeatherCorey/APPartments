@@ -20,6 +20,7 @@ class FetchRequestViewController: UIViewController, UITableViewDelegate, UITable
     
     var locations: [Location] = []
     var routes: [Route] = []
+    var chosenRoute: Route?
     
 //    Functions
     
@@ -31,6 +32,7 @@ class FetchRequestViewController: UIViewController, UITableViewDelegate, UITable
         let cell = tableView.dequeueReusableCell(withIdentifier: "fetchedDataCell", for: indexPath) as! FetchedDataTableViewCell
 
         cell.routeDescription.text = routes[indexPath.row].userDefinedDescription
+        chosenRoute = routes[indexPath.row]
         return cell
     }
     
@@ -65,4 +67,13 @@ class FetchRequestViewController: UIViewController, UITableViewDelegate, UITable
             return []
         }
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        
+        if let destinationViewController = segue.destination as? RouteDetailsViewController {
+            destinationViewController.chosenRoute = chosenRoute
+        }
+    }
+    
+    
 }
